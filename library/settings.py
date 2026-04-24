@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'access',
     'ratings',
     'history',
+    'api',
     'rest_framework',
 ]
 
@@ -84,6 +85,12 @@ DATABASES = {
         'HOST': 'localhost',
         'PORT': '5432',
     }
+}
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    ),
 }
 
 # Password validation
