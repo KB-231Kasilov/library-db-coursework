@@ -1,14 +1,19 @@
-from django.urls import path, include
+from django.urls import path
 from rest_framework.routers import DefaultRouter
-from .views import BookViewSet, UserViewSet, AccessViewSet, RatingViewSet, HistoryViewSet
 from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
-from .utils.export import export_books_csv
-from django.urls import path
+from .views import (
+    BookViewSet, UserViewSet, AccessViewSet, RatingViewSet, HistoryViewSet,
+    AuthorViewSet, GenreViewSet, CategoryViewSet, PublisherViewSet, BookFileViewSet
+)
 from .utils.export import export_books_csv, export_books_json
-from django.urls import path
 
 router = DefaultRouter()
 router.register('books', BookViewSet)
+router.register('authors', AuthorViewSet)
+router.register('genres', GenreViewSet)
+router.register('categories', CategoryViewSet)
+router.register('publishers', PublisherViewSet)
+router.register('book-files', BookFileViewSet)
 router.register('users', UserViewSet)
 router.register('access', AccessViewSet)
 router.register('ratings', RatingViewSet)
