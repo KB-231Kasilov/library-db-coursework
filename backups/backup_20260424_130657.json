@@ -1,0 +1,29 @@
+{
+    "users": [
+        {
+            "id": 1,
+            "full_name": "Иванов Иван Иванович",
+            "email": "ivan12345@mail.ru",
+            "password": "1234",
+            "role": "reader"
+        },
+        {
+            "id": 2,
+            "full_name": "Петрова Мария Сергеевна",
+            "email": "maria12345@mail.ru",
+            "password": "12345",
+            "role": "reader"
+        },
+        {
+            "id": 3,
+            "full_name": "Сидоров Алексей Андреевич",
+            "email": "sidorov@mail.ru",
+            "password": "123456",
+            "role": "reader"
+        }
+    ],
+    "books": [
+        {
+            "id": 1,
+            "title": "Война и мир",
+            "price": 
